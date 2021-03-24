@@ -10,4 +10,8 @@ module TextDisplay
   def board_full_message
     puts 'Draw - the board is full!'
   end
+
+  def player_win_message(player)
+    puts "#{player.name} has won with 4 pieces in a row!"
+  end
 end

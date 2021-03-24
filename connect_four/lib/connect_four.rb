@@ -43,8 +43,15 @@ class ConnectFour
   end
 
   def game_over?
-    #@board.winning_combination?
-    @board.full?
+    if @board.winning_combination? 
+      @board.display_board
+      player_win_message(@current_player)
+      true
+    elsif @board.full?
+      @board.display_board
+      board_full_message
+      true
+    end
   end
 
   def switch_player
