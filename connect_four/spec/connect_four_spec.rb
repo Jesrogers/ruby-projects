@@ -1,9 +1,9 @@
 require './lib/connect_four'
 
 describe ConnectFour do
-  describe '#initialize' do
-    game = ConnectFour.new
+  let(:game) { ConnectFour.new }
 
+  describe '#initialize' do
     it "Should have a player named 'Player 1'" do
       expect(game.player1.name).to eql('Player 1')
     end

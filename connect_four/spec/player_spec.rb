@@ -1,9 +1,9 @@
 require './lib/player'
 
 describe Player do
-  describe '#initialize' do
-    player = Player.new('Player 1', 'O')
+  let(:player) { Player.new('Player 1', 'O') }
 
+  describe '#initialize' do
     it 'creates a player with a given name' do
       expect(player.name).to eql('Player 1')
     end

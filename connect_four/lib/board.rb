@@ -2,7 +2,7 @@ require_relative 'text_display'
 
 class Board
   include TextDisplay
-  attr_reader :grid
+  attr_accessor :grid
 
   def initialize
     @grid = Array.new(7) { Array.new(6) }
